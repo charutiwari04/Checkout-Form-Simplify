@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz - One Big, Ugly Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <span class="company-name">🂡 Cam's Company 🂡</span>
+    <span class="company-page">Checkout Page</span>
+  </header>
+  </br>
+  </br>
+  <section class="order-review">
+    <h3>Your Order</h3>
+    <table class="your-order">
+	  <tr class="headings">
+	    <td></td>
+        <td>Item</td>
+        <td>Price</td>
+      </tr>
+      <tr>
+        <td><img src="images/NES-Console-Set.png"></td>
+		<td>Game Console 2015 1X</td>
+        <td>$500.00</td>
+      </tr>
+    </table>
+  </section>
+  <section class="form">
+    <h3>Where do you want your order to be sent?</h3>
+    <label for="name">
+      <input id="name" type="text" placeholder="Name" autocomplete>
+    </label>
+    <label for="email">
+      <input id="email" type="email" placeholder="Email Address" autocomplete>
+    </label>
+    <label for="add1">
+      <input id="add1" type="text" placeholder="Address Line 1" autocomplete>
+    </label>
+    <label for="add2">
+      <input id="add2" type="text" placeholder="Address Line 2" autocomplete>
+    </label>
+    <label for="city">
+      <input id="city" type="text" placeholder="Address Line 3" autocomplete>
+    </label>
+    <label for="state">
+      <input id="state" type="text" placeholder="Address Line 4" autocomplete>
+    </label>
+    <label for="zipCode">
+      <input id="zipCode" type="text" placeholder="Address Line 5" autocomplete>
+    </label>
+    
+    <h3>Your Credit Card Information</h3>
+    <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+    <label for="ccnum">
+      <input id="ccnum" placeholder="&#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679;" type="password" >
+    </label>
+    <label for="ctype">
+      <input class="inline" id="ctype" placeholder="Card Type" type="text">
+    </label>
+    <label for="expDateMM">
+      <input id="expDateMM" type="text" placeholder="MM">
+    </label>
+	<label for="expDateYY">
+      <input id="expDateYY" type="text" placeholder="YY">
+    </label>
+    <label for="cvv">
+      <input id="cvv" type="text" placeholder="CVV" >
+    </label>
+
+    <label class="inline" for="q2">Use different billing address?<input id="q2" onclick="showMe('bill-address')" class="inline" type="checkbox">
+	</label>
+	<section id="bill-address">
+	<label for="bill-name">
+      <input id="bill-name" type="text" placeholder="Name" autocomplete>
+    </label>
+    <label for="bill-email">
+      <input id="bill-email" type="email" placeholder="Email Address" autocomplete>
+    </label>
+    <label for="bill-add1">
+      <input id="bill-add1" type="text" placeholder="Address Line 1" autocomplete>
+    </label>
+    <label for="bill-add2">
+      <input id="bill-add2" type="text" placeholder="Address Line 2" autocomplete>
+    </label>
+    <label for="bill-city">
+      <input id="bill-city" type="text" placeholder="Address Line 3" autocomplete>
+    </label>
+    <label for="bill-state">
+      <input id="bill-state" type="text" placeholder="Address Line 4" autocomplete>
+    </label>
+    <label for="bill-zipCode">
+      <input id="bill-zipCode" type="text" placeholder="Address Line 5" autocomplete>
+    </label>
+	</section>
+	<input id="submit" type="submit" value="Place Order">
+  </section>
+
+  
+  <script>
+    document.getElementById('bill-address').style.display = 'none';
+    function showMe(box){
+        var element = document.getElementById(box);
+	    var chkBox = document.getElementById('q2');
+	    var vis = "none";
+        
+            if(chkBox.checked){
+             vis = "block";
+            }
+       
+        element.style.display = vis;
+	}
+    var submit = document.querySelector('#submit');
+    submit.onclick = function () {
+        alert("All of your information was valid, right? I'll just go ahead and assume that it is ;)\n\nThanks for your submission!");
+    };
+  </script>
+</body>
+</html>
