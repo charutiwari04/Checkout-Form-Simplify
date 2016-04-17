@@ -98,25 +98,6 @@
 	</section>
 	<input id="submit" type="submit" value="Place Order">
   </section>
-
-  
-  <script>
-    document.getElementById('bill-address').style.display = 'none';
-    function showMe(box){
-        var element = document.getElementById(box);
-	    var chkBox = document.getElementById('q2');
-	    var vis = "none";
-        
-            if(chkBox.checked){
-             vis = "block";
-            }
-       
-        element.style.display = vis;
-	}
-    var submit = document.querySelector('#submit');
-    submit.onclick = function () {
-        alert("All of your information was valid, right? I'll just go ahead and assume that it is ;)\n\nThanks for your submission!");
-    };
-  </script>
+  <script src="js/app.js"></script>
 </body>
 </html>
