@@ -31,8 +31,11 @@
   </section>
   <section class="form">
     <h3>Where do you want your order to be sent?</h3>
+	<label for="loc">
+	  <input id="loc" type="text" onFocus="getAddress()">
+	</label>
     <label for="name">
-      <input id="name" type="text" placeholder="Name" autocomplete>
+      <input id="name" type="text" placeholder="Name" autocomplete required>
     </label>
     <label for="email">
       <input id="email" type="email" placeholder="Email Address" autocomplete>
@@ -43,14 +46,11 @@
     <label for="add2">
       <input id="add2" type="text" placeholder="Address Line 2" autocomplete>
     </label>
-    <label for="city">
-      <input id="city" type="text" placeholder="Address Line 3" autocomplete>
+    <label for="add3">
+      <input id="add3" type="text" placeholder="Address Line 3" autocomplete>
     </label>
-    <label for="state">
-      <input id="state" type="text" placeholder="Address Line 4" autocomplete>
-    </label>
-    <label for="zipCode">
-      <input id="zipCode" type="text" placeholder="Address Line 5" autocomplete>
+    <label for="add4">
+      <input id="add4" type="text" placeholder="Address Line 4" autocomplete>
     </label>
     
     <h3>Your Credit Card Information</h3>
@@ -74,30 +74,29 @@
     <label class="inline" for="q2">Use different billing address?<input id="q2" onclick="showMe('bill-address')" class="inline" type="checkbox">
 	</label>
 	<section id="bill-address">
-	<label for="bill-name">
-      <input id="bill-name" type="text" placeholder="Name" autocomplete>
-    </label>
-    <label for="bill-email">
-      <input id="bill-email" type="email" placeholder="Email Address" autocomplete>
-    </label>
-    <label for="bill-add1">
-      <input id="bill-add1" type="text" placeholder="Address Line 1" autocomplete>
-    </label>
-    <label for="bill-add2">
-      <input id="bill-add2" type="text" placeholder="Address Line 2" autocomplete>
-    </label>
-    <label for="bill-city">
-      <input id="bill-city" type="text" placeholder="Address Line 3" autocomplete>
-    </label>
-    <label for="bill-state">
-      <input id="bill-state" type="text" placeholder="Address Line 4" autocomplete>
-    </label>
-    <label for="bill-zipCode">
-      <input id="bill-zipCode" type="text" placeholder="Address Line 5" autocomplete>
-    </label>
-	</section>
+	    <label for="bill-name">
+            <input id="bill-name" type="text" placeholder="Name" autocomplete>
+        </label>
+        <label for="bill-email">
+            <input id="bill-email" type="email" placeholder="Email Address" autocomplete>
+        </label>
+        <label for="bill-add1">
+            <input id="bill-add1" type="text" placeholder="Address Line 1" autocomplete>
+        </label>
+        <label for="bill-add2">
+            <input id="bill-add2" type="text" placeholder="Address Line 2" autocomplete>
+        </label>
+        <label for="bill-add3">
+            <input id="bill-add3" type="text" placeholder="Address Line 3" autocomplete>
+        </label>
+        <label for="bill-add4">
+            <input id="bill-add4" type="text" placeholder="Address Line 4" autocomplete>
+        </label>
+    </section>
 	<input id="submit" type="submit" value="Place Order">
   </section>
   <script src="js/app.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9HgTqVlCwFCWw8rX8Auwu5bKgIO218FI&libraries=places&callback=init" async defer></script>
+  
 </body>
 </html>
